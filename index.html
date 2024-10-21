@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Data Science Portfolio</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Body font */
+            background-color: #EBE6D5; /* Background color */
+            color: #ADA589; /* Text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif; /* Heading font */
+            color: #000000; /* Primary color */
+            text-align: center; /* Center align headings */
+            margin: 20px 0; /* Margin for spacing */
+        }
+
+        .skills-section {
+            text-align: center; /* Center align the section */
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center; /* Center align the skill items horizontally */
+            flex-wrap: wrap; /* Allow wrapping to the next line if there's not enough space */
+            gap: 20px; /* Space between skill items */
+        }
+
+        .skill-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align items horizontally */
+            width: 100%; /* Full width of the parent container */
+            max-width: 100px; /* Set a max width for the container */
+            margin: auto; /* Center the container horizontally */
+            background-color: #E3D8B6; /* Background color of the box */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 3D effect with shadow */
+            transition: box-shadow 0.3s ease, transform 0.3s ease; 
+            text-decoration: none; /* Remove underline from text */
+            color: inherit; /* Inherit color from parent */
+            height: 150px; /* Set a fixed height for the container (adjust as needed) */
+        }
+
+        .skill-container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+            transform: translateY(-4px); /* Slight lift effect on hover */
+        }
+
+        .skill-container img {
+            width: 98%; /* Make the image take up a certain percentage of the container */
+            max-height: 70%; /* Set a max height for the image to prevent overflow */
+            height: 70%; /* Maintain aspect ratio */
+            border-radius: 4px;
+        }
+
+        .skill-container p {
+            text-align: center; /* Center the text below the image */
+            margin-top: 10px;
+            color: #6C757D;  /* Space between the image and text */
+        }
+
+        /* Add this keyframe animation to your CSS */
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8); /* Start smaller */
+            }
+            to {
+                opacity: 1;
+                transform: scale(1); /* End at normal size */
+            }
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #E3D8B6; /* Background color of modal */
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px; /* Padding inside the modal */
+            border: 1px solid #888; /* Border color */
+            width: 80%; /* Initial width */
+            height: auto; /* Initial height */
+            border-radius: 8px; /* Rounded corners */
+            transition: width 0.5s ease, height 0.5s ease; /* Smooth transition for expand/collapse */
+        }
+
+        /* Add this class for animation when modal is opened */
+        .modal-content.show {
+            animation: modalFadeIn 0.5s ease; /* Add the fade-in animation */
+        }
+
+        .expand {
+            color: #000; /* Color of the expand icon */
+            font-size: 24px; /* Size of the icon */
+            float: right; /* Float to the right */
+            margin-left: 10px; /* Space between close button and expand icon */
+            cursor: pointer; /* Pointer cursor */
+        }
+
+        .close {
+            color: #aaa; /* Close button color */
+            float: right; /* Float to the right */
+            font-size: 28px; /* Font size */
+            font-weight: bold; /* Bold text */
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black; /* Color on hover */
+            text-decoration: none; /* Remove underline */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Portfolio</h1>
+    </header>
+    <section>
+        <h2>About Me</h2>
+        <p>Driven by a deep understanding of how things work, I excel at tackling challenging projects and solving complex problems through innovative approaches. With expertise in control systems, 
+            data science, and artificial intelligence.</p>
+        <div class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills">
+                
+                <!-- Skill 1: Linear Regression -->
+                <div class="skill-container" onclick="openModal('linearRegressionModal')">
+                    <img src="{{ url_for('static', filename='Regression_icon.jpg') }}" alt="Linear Regression Icon">
+                    <p>Linear Regression</p>
+                </div>
+                <!-- Skill 2: Logistic Regression -->
+                <div class="skill-container" onclick="openModal('logisticRegressionModal')">
+                    <img src="{{ url_for('static', filename='logistic_regression.jpg') }}" alt="Logistic Regression Icon">
+                    <p>Logistic Regression</p>
+                </div>
+                <!-- Skill 3: K-nearest Neighbor -->
+                <div class="skill-container" onclick="openModal('knnModal')">
+                    <img src="{{ url_for('static', filename='knn.png') }}" alt="knn  Icon">
+                    <p>K-Nearest Neighbor</p>
+                </div>
+                <!-- Skill 4: Support Vector Machine -->
+                <div class="skill-container" onclick="openModal('svmModal')">
+                    <img src="{{ url_for('static', filename='svm.jpeg') }}" alt="svm  Icon">
+                    <p>Support Vector Machine</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Linear Regression -->
+    <div id="linearRegressionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('linearRegressionModal')">&times;</span>
+            <span class="expand" onclick="toggleExpand('linearRegressionModal')">▲</span> <!-- Expand icon -->
+            <h2>Linear Regression Projects</h2>
+            <div id="linearRegressionContent" style="max-height: 60vh; overflow-y: auto;"></div> <!-- Set max-height and overflow -->
+        </div>
+    </div>
+
+    <!-- Modal for logistic Regression -->
+    <div id="logisticRegressionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('logisticRegressionModal')">&times;</span>
+            <span class="expand" onclick="toggleExpand('logisticRegressionModal')">▲</span> <!-- Expand icon -->
+            <h2>Logistic Regression Projects</h2>
+            <div id="logisticRegressionContent" style="max-height: 60vh; overflow-y: auto;"></div> <!-- Set max-height and overflow -->
+        </div>
+    </div>
+
+    <!-- Modal for knn Neighbors -->
+    <div id="knnModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('knnModal')">&times;</span>
+            <span class="expand" onclick="toggleExpand('knnModal')">▲</span> <!-- Expand icon -->
+            <h2>K-nearest Neighbor Projects</h2>
+            <div id="knnContent" style="max-height: 60vh; overflow-y: auto;"></div> <!-- Set max-height and overflow -->
+        </div>
+    </div>
+
+    <!-- Modal for SVM -->
+    <div id="svmModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('svmModal')">&times;</span>
+            <span class="expand" onclick="toggleExpand('svmModal')">▲</span> <!-- Expand icon -->
+            <h2>Support Vector Machine Projects</h2>
+            <div id="svmContent" style="max-height: 60vh; overflow-y: auto;"></div> <!-- Set max-height and overflow -->
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal and load content
+        let modalContentId = '';
+        function openModal(modalId) {
+            if (modalId === 'linearRegressionModal') {
+                modalContentId = 'linearRegressionContent';
+                fetch('/linear_regression')  // Change to the correct route
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(modalContentId).innerHTML = data; // Load fetched content
+                        const modalContent = document.getElementById(modalId).getElementsByClassName('modal-content')[0];
+                        modalContent.classList.add('show'); // Add the show class for animation
+                        document.getElementById(modalId).style.display = "block"; // Show the modal
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            } else if (modalId === 'logisticRegressionModal') {
+                modalContentId = 'logisticRegressionContent';
+                fetch('/logistic_regression')  // Change to the correct route
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(modalContentId).innerHTML = data; // Load fetched content
+                        const modalContent = document.getElementById(modalId).getElementsByClassName('modal-content')[0];
+                        modalContent.classList.add('show'); // Add the show class for animation
+                        document.getElementById(modalId).style.display = "block"; // Show the modal
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            } else if (modalId === 'knnModal') {
+                modalContentId = 'knnContent';
+                fetch('/knn')  // Change to the correct route
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(modalContentId).innerHTML = data; // Load fetched content
+                        const modalContent = document.getElementById(modalId).getElementsByClassName('modal-content')[0];
+                        modalContent.classList.add('show'); // Add the show class for animation
+                        document.getElementById(modalId).style.display = "block"; // Show the modal
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            }
+            else if (modalId === 'svmModal') {
+                modalContentId = 'svmContent';
+                fetch('/svm')  // Change to the correct route
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById(modalContentId).innerHTML = data; // Load fetched content
+                        const modalContent = document.getElementById(modalId).getElementsByClassName('modal-content')[0];
+                        modalContent.classList.add('show'); // Add the show class for animation
+                        document.getElementById(modalId).style.display = "block"; // Show the modal
+                    })
+                    .catch(error => console.error('Error loading content:', error));
+            }
+            else {
+                document.getElementById(modalId).style.display = "block"; // Show the modal if no content to load
+            }
+        }
+
+        // Function to close the modal
+        function closeModal(modalId) {
+            const modalContent = document.getElementById(modalId).getElementsByClassName('modal-content')[0];
+            modalContent.classList.remove('show'); // Remove the show class
+            document.getElementById(modalId).style.display = "none"; // Hide the modal
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName('modal');
+            for (let modal of modals) {
+                if (event.target === modal) {
+                    closeModal(modal.id);
+                }
+            }
+        }
+
+        // Expand the modal when clicking 
+        function toggleExpand(modalId) {
+            const modalContent = document.getElementById(modalId).getElementsByClassName('modal-content')[0];
+            const expandIcon = modalContent.getElementsByClassName('expand')[0];
+            
+            if (modalContent.style.width === "97%" && modalContent.style.height === "97%") {
+                modalContent.style.width = "80%"; // Change back to original size
+                modalContent.style.height = "auto"; // Reset height
+                expandIcon.textContent = "▲"; // Change icon back to up arrow
+            } else {
+                modalContent.style.width = "97%"; // Expand to full width
+                modalContent.style.height = "97%"; // Expand to full height
+                expandIcon.textContent = "▼"; // Change icon to down arrow
+            }
+        }
+    </script>
+</body>
+</html>
