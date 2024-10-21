@@ -6,111 +6,103 @@
     <title>Linear Regression Projects</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif; /* Body font */
-            background-color: #EBE6D5; /* Background color */
-            color: #ADA589; /* Text color */
+            font-family: 'Roboto', sans-serif;
+            background-color: #EBE6D5;
             margin: 0;
-            padding: 0;
-        }
-        
-        h1, h2 {
-            font-family: 'Montserrat', sans-serif; /* Heading font */
-            color: #000000; /* Primary color */
-            text-align: center; /* Center align headings */
-            margin: 20px 0; /* Margin for spacing */
+            padding: 20px;
         }
 
-        h3 {
-            font-family: 'Montserrat', sans-serif; /* Heading font */
-            color: #000000; /* Primary color */
-            margin: 10px 20px; /* Margin for spacing */
-        }
-
-        p {
-            text-align: justify; /* Justify text */
-            margin: 10px 20px; /* Add some margin for spacing */
-        }
-        .project-box {
-            border: 2px solid #6C757D; /* Border for the entire project box */
-            border-radius: 10px; /* Rounded corners */
-            background-color: transparent; /* Background color */
-            padding: 20px; /* Padding inside the box */
-            margin: 20px 0; /* Space between each project box */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-            max-width: 1200px; /* Optional max width for larger screens */
-            margin-left: auto; /* Center the box horizontally */
-            margin-right: auto;
-        }
-        .project {
-            display: flex; /* Use flexbox */
-            flex-wrap: wrap; /* Allow items to wrap */
-            margin: 20px; /* Add some margin around the project */
-            justify-content: space-between; /* Distribute space between items */
-        }
-
-        .project-description, .project-objective {
-            flex: 1; /* Take up equal space */
-            padding: 10px; /* Add some padding */
-            min-width: 300px; /* Minimum width for responsiveness */
-            border: 2px solid #6C757D; /* Border around the sections */
-            border-radius: 8px; /* Rounded corners */
-            background-color: #F8F9FA; /* Light background color */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-            margin: 10px; /* Space between sections */
-        }
-
-        .results {
-            margin-top: 20px; /* Space between the project details and results */
-        }
-        .project a {
-            margin: 10px 20px; /* Add margin to the GitHub link */
-            display: inline-block; /* Ensures margin works correctly */
-            color: #000000; /* Link color */
-            text-decoration: none; /* Remove underline from the link */
-        }
-        
-        .project a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        .results {
-            flex: 1; /* Take up equal space */
-            padding: 10px; /* Add some padding */
-            min-width: 300px; /* Minimum width for responsiveness */
-            border: 2px solid #6C757D; /* Border around the sections */
-            border-radius: 8px; /* Rounded corners */
-            background-color: #F8F9FA; /* Light background color */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
-            margin: 25  px ; /* Center the results section with auto margins */
+        .main-title {
+            font-size: 2.5em;
             text-align: center;
+            color: #000000;
+            margin-bottom: 40px;
         }
+
+        .project-box {
+            background-color: transparent;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 0 auto;
+            max-width: 1000px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-title {
+            font-size: 1.8em;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .content-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .section-content {
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        .project-description,
+        .project-objective,
+        .results {
+            background-color: #F8F9FA;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            color: #666666;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         @media screen and (max-width: 768px) {
-            .project {
-                flex-direction: column; /* Stack vertically on smaller screens */
-                align-items: center; /* Center the columns */
+            body {
+                padding: 10px;
             }
 
-            .project-description, .project-objective {
-                width: 100%; /* Make them full width */
-                margin: 0; /* Remove margins for better spacing */
-                margin-bottom: 20px; /* Space between stacked elements */
+            .project-box {
+                padding: 15px;
             }
 
-            .results {
-                width: 100%; /* Make the results section full width */
-                margin-top: 20px; /* Add space above results */
+            .main-title {
+                font-size: 2em;
+                margin-bottom: 20px;
             }
 
-            h2 {
-                font-size: 1.5rem; /* Adjust heading size for mobile */
+            .project-title {
+                font-size: 1.5em;
             }
 
-            h3 {
-                font-size: 1.25rem; /* Adjust heading size for mobile */
-            }
-
-            p, li {
-                font-size: 0.9rem; /* Slightly smaller text for mobile */
+            .section-title {
+                font-size: 1.2em;
             }
         }
     </style>
