@@ -85,14 +85,32 @@
             text-align: center;
         }
         @media screen and (max-width: 768px) {
-            .container {
+            .project {
                 flex-direction: column; /* Stack vertically on smaller screens */
                 align-items: center; /* Center the columns */
             }
 
-            .objectives, .description, .results {
+            .project-description, .project-objective {
                 width: 100%; /* Make them full width */
-                max-width: none; /* Remove the max-width */
+                margin: 0; /* Remove margins for better spacing */
+                margin-bottom: 20px; /* Space between stacked elements */
+            }
+
+            .results {
+                width: 100%; /* Make the results section full width */
+                margin-top: 20px; /* Add space above results */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Adjust heading size for mobile */
+            }
+
+            h3 {
+                font-size: 1.25rem; /* Adjust heading size for mobile */
+            }
+
+            p, li {
+                font-size: 0.9rem; /* Slightly smaller text for mobile */
             }
         }
     </style>
