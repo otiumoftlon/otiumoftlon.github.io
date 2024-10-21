@@ -1,61 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistic Regression Projects</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif; /* Body font */
-            background-color: #EBE6D5; /* Background color */
-            color: #ADA589; /* Text color */
-            margin: 0;
-            padding: 0;
-        }
-        
-        h1, h2 {
-            font-family: 'Montserrat', sans-serif; /* Heading font */
-            color: #000000; /* Primary color */
-            text-align: center; /* Center align headings */
-            margin: 20px 0; /* Margin for spacing */
-        }
-
-        h3 {
-            font-family: 'Montserrat', sans-serif; /* Heading font */
-            color: #000000; /* Primary color */
-            text-align: justify; /* Justify text */
-            margin: 10px 20px; /* Margin for spacing */
-        }
-
-        p {
-            text-align: justify; /* Justify text */
-            margin: 10px 20px; /* Add some margin for spacing */
-        }
-
-        .project a {
-            margin: 10px 20px; /* Add margin to the GitHub link */
-            display: inline-block; /* Ensures margin works correctly */
-            color: #000000; /* Link color */
-            text-decoration: none; /* Remove underline from the link */
-        }
-        
-        .project a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Linear Regression Projects</title>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif; /* Body font */
+                background-color: #EBE6D5; /* Background color */
+                color: #ADA589; /* Text color */
+                margin: 0;
+                padding: 0;
+            }
+            
+            h1, h2 {
+                font-family: 'Montserrat', sans-serif; /* Heading font */
+                color: #000000; /* Primary color */
+                text-align: center; /* Center align headings */
+                margin: 20px 0; /* Margin for spacing */
+            }
+    
+            h3 {
+                font-family: 'Montserrat', sans-serif; /* Heading font */
+                color: #000000; /* Primary color */
+                margin: 10px 20px; /* Margin for spacing */
+            }
+    
+            p {
+                text-align: justify; /* Justify text */
+                margin: 10px 20px; /* Add some margin for spacing */
+            }
+            .project-box {
+                border: 2px solid #6C757D; /* Border for the entire project box */
+                border-radius: 10px; /* Rounded corners */
+                background-color: transparent; /* Background color */
+                padding: 20px; /* Padding inside the box */
+                margin: 20px 0; /* Space between each project box */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+                max-width: 1200px; /* Optional max width for larger screens */
+                margin-left: auto; /* Center the box horizontally */
+                margin-right: auto;
+            }
+            .project {
+                display: flex; /* Use flexbox */
+                flex-wrap: wrap; /* Allow items to wrap */
+                margin: 20px; /* Add some margin around the project */
+                justify-content: space-between; /* Distribute space between items */
+            }
+    
+            .project-description, .project-objective {
+                flex: 1; /* Take up equal space */
+                padding: 10px; /* Add some padding */
+                min-width: 300px; /* Minimum width for responsiveness */
+                border: 2px solid #6C757D; /* Border around the sections */
+                border-radius: 8px; /* Rounded corners */
+                background-color: #F8F9FA; /* Light background color */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+                margin: 10px; /* Space between sections */
+            }
+    
+            .results {
+                margin-top: 20px; /* Space between the project details and results */
+            }
+            .project a {
+                margin: 10px 20px; /* Add margin to the GitHub link */
+                display: inline-block; /* Ensures margin works correctly */
+                color: #000000; /* Link color */
+                text-decoration: none; /* Remove underline from the link */
+            }
+            
+            .project a:hover {
+                text-decoration: underline; /* Underline on hover */
+            }
+    
+            .results {
+                flex: 1; /* Take up equal space */
+                padding: 10px; /* Add some padding */
+                min-width: 300px; /* Minimum width for responsiveness */
+                border: 2px solid #6C757D; /* Border around the sections */
+                border-radius: 8px; /* Rounded corners */
+                background-color: #F8F9FA; /* Light background color */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+                margin: 25  px ; /* Center the results section with auto margins */
+                text-align: center;
+            }
+        </style>
+    </head>
 
 <body>
-    <h1>Logistic Regression Projects</h1>
-    <div class="project">
-        <h3>Project 1: Logistic Regression basics</h3>
-        <p>This project involves a scratch implementation of logistic regression, 
-            accompanied by data analysis and a comparison with existing methods in scikit-learn. 
-            The primary application of this method is in modeling the classification of cancer tumors,
-            specifically to determine whether they are benign or malignant. Additionally, 
-            the analysis explores strategies for creating a lighter model using 
-            correlation analysis and Principal Component Analysis (PCA).</p>
-        <a href="https://github.com/otiumoftlon/Logistic_regression_basics">View on GitHub</a>
+    <div class="project-box">
+        <h2 style="text-align: center;">Project 1: Logistic Regression basics</h2>
+        <div class="project">
+            
+            <div class="project-description">
+                <h3>Description</h3>
+                <p>This project involves a scratch implementation of logistic regression, 
+                    accompanied by data analysis and a comparison with existing methods in scikit-learn. 
+                    The primary application of this method is in modeling the classification of cancer tumors,
+                    specifically to determine whether they are benign or malignant. Additionally, 
+                    the analysis explores strategies for creating a lighter model using 
+                    correlation analysis and Principal Component Analysis (PCA).</p>
+                <a href="https://github.com/otiumoftlon/Logistic_regression_basics">View on GitHub</a>
+            </div>
+            <div class="project-objective">
+                <h3>Objective</h3>
+                <ul>
+                    <li>Apply gradient descent optimization to minimize the error.</li>
+                    <li>Leverage gradient descent to estimate optimal model parameters with bias.</li>
+                    <li>Compare the accuracy between the custom model and the Sklearn implementation.</li> 
+                    <li>Conduct a correlation analysis to identify relationships between variables in the data.</li>
+                    <li>Perform Principal Component Analysis (PCA) to reduce dimensionality of the data.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="results">
+            <h3 style="text-align: center;">Results</h3>
+            <p>Running for 10,000 iterations, achieves an <b>error rate of about 0.1 </b>  and begins to converge. 
+                To find optimal parameters, we take the final parameters and restart the iteration process until we reach convergence or achieve a minimal error. </p>
+            <p>The gradient descent method achieves a better porcentage of accuracy <b>of 98.8% respect Sklearn with 98.2%</b>. Both scores are excellent, indicating 
+                that almost every type of cancer is correctly classified.  
+            </p>
+            <p>
+                Through correlation analysis, we identified several features that could serve as strong candidates for the model. 
+                However, when evaluating accuracy, <b>we observed a decrease of about 5%</b>, bringing the overall <b>accuracy to 94%</b>. 
+                While this is still a commendable performance, the context—given that it involves human lives—requires a higher degree of certainty.
+                Therefore, it is crucial to ensure the model's reliability.
+            </p>
+            <p> 
+                In this analysis, six components effectively explain the data, which is why it is selected only six features to develop the model. 
+                Principal Components One and Two exhibit a clear linear relationship, leading to more compelling results. 
+                The model achieved an <b>impressive accuracy of 0.97</b>, which is nearly equivalent to the performance with all features. 
+                Consequently, the PCA analysis <b>significantly reduced training time and model complexity.</b>
+            </p>
+        </div>
     </div>
     <!-- Add more projects as needed -->
 </body>

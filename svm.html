@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Vector Machine Projects</title>
+    <title>Linear Regression Projects</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif; /* Body font */
@@ -23,7 +23,6 @@
         h3 {
             font-family: 'Montserrat', sans-serif; /* Heading font */
             color: #000000; /* Primary color */
-            text-align: justify; /* Justify text */
             margin: 10px 20px; /* Margin for spacing */
         }
 
@@ -31,7 +30,38 @@
             text-align: justify; /* Justify text */
             margin: 10px 20px; /* Add some margin for spacing */
         }
+        .project-box {
+            border: 2px solid #6C757D; /* Border for the entire project box */
+            border-radius: 10px; /* Rounded corners */
+            background-color: transparent; /* Background color */
+            padding: 20px; /* Padding inside the box */
+            margin: 20px 0; /* Space between each project box */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            max-width: 1200px; /* Optional max width for larger screens */
+            margin-left: auto; /* Center the box horizontally */
+            margin-right: auto;
+        }
+        .project {
+            display: flex; /* Use flexbox */
+            flex-wrap: wrap; /* Allow items to wrap */
+            margin: 20px; /* Add some margin around the project */
+            justify-content: space-between; /* Distribute space between items */
+        }
 
+        .project-description, .project-objective {
+            flex: 1; /* Take up equal space */
+            padding: 10px; /* Add some padding */
+            min-width: 300px; /* Minimum width for responsiveness */
+            border: 2px solid #6C757D; /* Border around the sections */
+            border-radius: 8px; /* Rounded corners */
+            background-color: #F8F9FA; /* Light background color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            margin: 10px; /* Space between sections */
+        }
+
+        .results {
+            margin-top: 20px; /* Space between the project details and results */
+        }
         .project a {
             margin: 10px 20px; /* Add margin to the GitHub link */
             display: inline-block; /* Ensures margin works correctly */
@@ -42,20 +72,54 @@
         .project a:hover {
             text-decoration: underline; /* Underline on hover */
         }
+
+        .results {
+            flex: 1; /* Take up equal space */
+            padding: 10px; /* Add some padding */
+            min-width: 300px; /* Minimum width for responsiveness */
+            border: 2px solid #6C757D; /* Border around the sections */
+            border-radius: 8px; /* Rounded corners */
+            background-color: #F8F9FA; /* Light background color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+            margin: 25  px ; /* Center the results section with auto margins */
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Support Vector Machine Projects</h1>
-    <div class="project">
-        <h3>Project 1: Support vector machine basics</h3>
-        <p>This project entails the development of a Support Vector Machine (SVM) from scratch, 
-            incorporating kernel methods in Python. For flexibility, I will utilize the CVXPY library 
-            for optimization. The performance of our implementation will be compared against the 
-            well-established Scikit-learn library using the blobs dataset 
-            to evaluate their effectiveness.
-        </p>
-        <a href="https://github.com/otiumoftlon/Support_vector_machine_basics">View on GitHub</a>
+    <div class="project-box">
+        <h2 style="text-align: center;">Project 1: Support vector machine basics</h2>
+        <div class="project">
+            
+            <div class="project-description">
+                <h3>Description</h3>
+                <p>This project entails the development of a Support Vector Machine (SVM) from scratch, 
+                    incorporating kernel methods in Python. For flexibility, I will utilize the CVXPY library 
+                    for optimization. The performance of our implementation will be compared against the 
+                    well-established Scikit-learn library using the blobs dataset 
+                    to evaluate their effectiveness.
+                </p>
+                <a href="https://github.com/otiumoftlon/Support_vector_machine_basics">View on GitHub</a>
+            </div>
+            <div class="project-objective">
+                <h3>Objective</h3>
+                <ul>
+                    <li>Apply the support vector machine algorithm from scratch.</li> 
+                    <li>Implement the algorithm with different kernel.</li> 
+                    <li>Allow versality changing parameters to CVXPY optimization.</li> 
+                    <li>Compare the custom implementation with Sklearn’s implementation.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="results">
+            <h3 style="text-align: center;">Results</h3>
+            <p>The algorithm performs well on small datasets and supports different kernels. 
+                However, I am still working on this project and need to compare the results with Sklearn's implementation. 
+                Additionally, I plan to enable options to display the shapes when a kernel is applied.</p>
+           
+        </div>
     </div>
     <!-- Add more projects as needed -->
 </body>
