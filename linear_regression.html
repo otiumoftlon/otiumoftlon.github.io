@@ -84,6 +84,17 @@
             margin: 25  px ; /* Center the results section with auto margins */
             text-align: center;
         }
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack vertically on smaller screens */
+                align-items: center; /* Center the columns */
+            }
+
+            .objectives, .description, .results {
+                width: 100%; /* Make them full width */
+                max-width: none; /* Remove the max-width */
+            }
+        }
     </style>
 </head>
 
