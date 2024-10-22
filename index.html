@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>My Data Science Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif; /* Body font */
@@ -79,6 +81,28 @@
         .about-text strong {
             color: #000; /* Emphasize important words */
         }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: left; /* Align icons to the left */
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 1.8em;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0077B5; /* LinkedIn blue color */
+        }
+
+        .social-icons a.github:hover {
+            color: #333; /* GitHub black color */
+        }
+
 
         /* Divider between sections */
         .section-divider {
@@ -200,13 +224,22 @@
     </header>
     <section class="about-section container">
         <div class="about-content">
-            <!--About Text -->
+            <!-- Right Column: About Text -->
             <div class="about-text">
                 <h2>About Me</h2>
                 <p>
                     <strong>Driven by a deep understanding of how things work,</strong> I excel at tackling challenging projects and solving complex problems through innovative approaches. 
                     With expertise in <strong>control systems</strong>, <strong>data science</strong>, and <strong>artificial intelligence</strong>, I thrive on transforming ideas into reality.
                 </p>
+
+                <div class="social-icons">
+                    <a href="https://github.com/otiumoftlon" target="_blank" class="github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/npava/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
