@@ -19,6 +19,72 @@
             text-align: center; /* Center align headings */
             margin: 20px 0; /* Margin for spacing */
         }
+        /* About Me Section */
+        .about-section {
+            background: linear-gradient(135deg, #F3EED9, #EDE4CE); /* Gradient background */
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            text-align: justify;
+        }
+
+        .about-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .about-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Circular image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .about-text {
+            flex: 2;
+            max-width: 600px;
+            
+        }
+
+        .about-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .about-text p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            max-width: 600px;
+            text-align: justify;
+        }
+
+        .about-text strong {
+            color: #000; /* Emphasize important words */
+        }
+
+        /* Divider between sections */
+        .section-divider {
+            border-top: 2px solid #D1C9B2; /* Light border color */
+            margin: 40px 0; /* Space around divider */
+        }
 
         .skills-section {
             text-align: center; /* Center align the section */
@@ -132,10 +198,25 @@
     <header>
         <h1>Welcome to my Portfolio</h1>
     </header>
+    <section class="about-section container">
+        <div class="about-content">
+            <!-- Left Column: Profile Image -->
+            <div class="about-image">
+                <img src="static\profile_photo.jpg" alt="Profile Image">
+            </div>
+    
+            <!-- Right Column: About Text -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    <strong>Driven by a deep understanding of how things work,</strong> I excel at tackling challenging projects and solving complex problems through innovative approaches. 
+                    With expertise in <strong>control systems</strong>, <strong>data science</strong>, and <strong>artificial intelligence</strong>, I thrive on transforming ideas into reality.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="section-divider"></div>
     <section>
-        <h2>About Me</h2>
-        <p>Driven by a deep understanding of how things work, I excel at tackling challenging projects and solving complex problems through innovative approaches. With expertise in control systems, 
-            data science, and artificial intelligence.</p>
         <div class="skills-section">
             <h2>Skills</h2>
             <div class="skills">
