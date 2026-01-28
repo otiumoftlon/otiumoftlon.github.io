@@ -1,5 +1,8 @@
 ---
-layout: home
+layout: default
+title: Home
+nav_order: 1
+description: "Welcome to Nicolas' Numerical Algebra documentation."
 ---
 
 ## Welcome to my Numerical Algebra Code Blog

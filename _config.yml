@@ -1,13 +1,21 @@
+# Site settings
 title: "Nicolas' Numerical Algebra Blog"
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A blog documenting my journey in Numerical Algebra, keeping track of paper implementations, explanations, and personal code.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+description: >-
+  A documentation of my journey in Numerical Algebra, keeping track of paper implementations, explanations, and personal code.
+
+# Theme settings
+remote_theme: just-the-docs/just-the-docs
+
+# Enable MathJax for LaTeX support
+math: mathjax
+
+# Just the Docs settings
+aux_links:
+  "My GitHub":
+    - "https://github.com/otiumoftlon"
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-remote-theme
