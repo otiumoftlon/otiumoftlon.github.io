@@ -18,4 +18,4 @@ Coding languages:
 - Python
 - C++
 
-Check out the [Projects](projects/) folder for the raw code.
+
