@@ -1,7 +1,7 @@
 # Site settings
-title: "Nicolas' Numerical Algebra Blog"
+title: "Nicolas' Blog"
 description: >-
-  A documentation of my journey in Numerical Algebra, keeping track of paper implementations, explanations, and personal code.
+  A documentation of my personal blog
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs
