@@ -5,3 +5,4 @@ _site/
 # Ignore executables from projects
 projects/numerical_algebra/*.exe
 projects/numerical_algebra/*.o
+references/
