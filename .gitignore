@@ -1,0 +1,7 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+# Ignore executables from projects
+projects/numerical_algebra/*.exe
+projects/numerical_algebra/*.o
