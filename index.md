@@ -2,16 +2,16 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Welcome to Nicolas' Numerical Algebra documentation."
+description: "Welcome to Nicolas' Blog."
 ---
 
-## Welcome to my Numerical Algebra Code Blog
+## Welcome to my Blog
 
-This blog will serve as a documentation of my work in **Numerical Algebra**.
+This blog will serve as a documentation of my notes, study,research and projects.
 
 Here you will find:
-- Explanations of papers I am reading.
-- Implementations of algorithms in **Python** and **C++**.
-- Insights into optimization and matrix computations.
+- Explanations of topics I am studying.
+- Implementations and solutions to problems
+- Insights into data science, robotics, optimization and computer vision.
 
-Check out the [Projects](projects/numerical_algebra) folder for the raw code.
+Check out the [Projects](projects/) folder for the raw code.
