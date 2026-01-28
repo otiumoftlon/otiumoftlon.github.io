@@ -14,4 +14,8 @@ Here you will find:
 - Implementations and solutions to problems
 - Insights into data science, robotics, optimization and computer vision.
 
+Coding languages:
+- Python
+- C++
+
 Check out the [Projects](projects/) folder for the raw code.
