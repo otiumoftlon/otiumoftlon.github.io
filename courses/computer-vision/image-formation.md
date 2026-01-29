@@ -13,8 +13,10 @@ I have a different philosophy when it comes to learning, I like to answer the qu
 ## Problem: Projection and perspective
 
 **Question**: Parallel projection equations stated in the book (What tha hell is a projection? what is the meaning of being parallel?):
-1. $x = \alpha X + x_0$
-2. $y = \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0$
+$$x = \alpha X + x_0$$
+$$y = \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0$$
+
+ Note: Lol this is just for fun but I am using antigravity to help me with the organization and creation of the pages in jekyll, and I wanted to paste the problem to not manually write it down, especially the equations, and it solved the problem for me, but I have already solved it by myself, so why not show the different ways of solving it? my way was really similar took me a bit more of time to write it down, but it was fun also I will show things that the machine can not think of.
 
 Show that these equations emerge naturally from a series of transformations applied to the 3D world coordinates $(X, Y, Z)$, of the form:
 
@@ -24,7 +26,7 @@ Where $R_x(\theta)$ is a $3 \times 3$ rotation matrix over the X-axis, $P$ is a 
 
 Then, find $\alpha, x_0$, and $y_0$ when the world point $(0, 0, 0)$ projects onto $(0, 0)$ and the point $(1, 0, 0)$ projects onto $(3, 0)$.
 
-### Solution
+### Solution (AI solution)
 
 #### 1. Transformation Matrices
 The rotation matrix around the X-axis by an angle $\theta$ is:
@@ -44,26 +46,24 @@ Finally, applying the scale $\alpha$ and adding the offset $\begin{bmatrix} x_0 
 $$\begin{bmatrix} x \\ y \end{bmatrix} = \alpha \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \end{bmatrix} + \begin{bmatrix} x_0 \\ y_0 \end{bmatrix} = \begin{bmatrix} \alpha X + x_0 \\ \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0 \end{bmatrix}$$
 This matches the equations given.
 
-#### 3. Finding $\alpha, x_0, y_0$
-- **Using point $(0, 0, 0) \to (0, 0)$**:
-  $0 = \alpha(0) + x_0 \implies x_0 = 0$
-  $0 = \alpha(\cos\theta(0) - \sin\theta(0)) + y_0 \implies y_0 = 0$
+### My solution
 
-- **Using point $(1, 0, 0) \to (3, 0)$**:
-  $3 = \alpha(1) + x_0 \implies 3 = \alpha + 0 \implies \alpha = 3$
-  $0 = \alpha(\cos\theta(0) - \sin\theta(0)) + y_0 \implies 0 = 0$ (Verified)
+Well the first thing I did was to find what is P and R, and basically are the ones that the AI find, but what is a projection matrix? maybe for experts on linear algebra and expert in robotics is obvious, but for the sake of begginers I will explain it, and almost every simple concept I will explain it, because I want this to be a place where begginers can learn, and I personally I like when the books and references are ultra explicit.
 
-**Result**: $\alpha = 3, x_0 = 0, y_0 = 0$.
+$$ P = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} $$
 
----
+This is a projection matrix. If you look at the last column, it’s all zeros. Basically, that column acts as a dimension eraser. In this case, it erases the Z dimension and keeps only the X and Y components of the vector it multiplies.
 
-## Key Concepts Explained
+Now let’s think a bit deeper: why would you want to erase a dimension?
+Here, the motivation is intuitive. Images don’t have depth, so we need a way to remove the depth information from the 3D world. This matrix does exactly that: it collapses the 3D space into 2D.
 
-### Parallel Projection
-Unlike perspective projection where rays converge at a point (the pinhole), in **parallel projection**, the rays are parallel to each other. This is often used to model telephoto lenses where the object is very far from the camera.
+In a data science context, the same idea appears when you project data into a lower-dimensional space. It might not be the best way to do dimensionality reduction, but it’s still a valid one. More sophisticated methods exist, like PCA, but conceptually, they’re doing something very similar: removing dimensions that we decide are less important.
 
-### Orthogonal Projection Matrix
-The matrix $P$ acts as a "selector", taking the 3D coordinates and flattening them onto a 2D plane. In our case, we rotate the world first to align the camera's view, then project.
+You can even push this idea further. Imagine the universe is 4D, but we can only perceive 3D. Then, in some sense, we need a mechanism to erase the fourth dimension. A projection matrix is exactly that mechanism.
 
-### Rotation Matrix $R_x(\theta)$
-This matrix represents a rotation in 3D space. Notice how the X-coordinate remains unchanged ($1$ in the top-left), while Y and Z are transformed by $\sin$ and $\cos$. 
+Can we erase more than one dimension? The simple answer is yes.
+
+Even in more advanced topics, like homogeneous coordinates, you’ll see a very similar idea. In general terms, homogeneous coordinates add an extra dimension (usually a 1) to make transformations more efficient to compute. Then, after the transformation, you effectively project back down, erasing that extra dimension. The equations look more complicated, but the underlying idea is almost the same as what we’re doing here.
+
+Note: In linear algebra, a simple trick to build these kinds of projection matrices is to start with an identity matrix of the target dimension and then add columns of zeros for the dimensions you want to eliminate.
+ 
