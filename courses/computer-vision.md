@@ -3,6 +3,7 @@ layout: default
 title: Computer Vision
 parent: Courses
 nav_order: 2
+has_children: true
 ---
 
 # Why Computer Vision?
