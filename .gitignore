@@ -7,3 +7,4 @@ projects/numerical_algebra/*.exe
 projects/numerical_algebra/*.o
 references/
 computer_vision/*
+.venv/*
