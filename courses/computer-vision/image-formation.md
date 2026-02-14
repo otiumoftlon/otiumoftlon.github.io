@@ -44,11 +44,14 @@ Multiplying the rotation matrix by the 3D point:
 $$R_x(\theta) \begin{bmatrix} X \\ Y \\ Z \end{bmatrix} = \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \\ \sin(\theta)Y + \cos(\theta)Z \end{bmatrix}$$
 
 Applying the projection matrix $P$:
+\\
 
 $$P \cdot R_x(\theta) \begin{bmatrix} X \\ Y \\ Z \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \\ \sin(\theta)Y + \cos(\theta)Z \end{bmatrix} = \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \end{bmatrix}$$
 
 Finally, applying the scale $\alpha$ and adding the offset $\begin{bmatrix} x_0 \\ y_0 \end{bmatrix}$:
+
 $$\begin{bmatrix} x \\ y \end{bmatrix} = \alpha \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \end{bmatrix} + \begin{bmatrix} x_0 \\ y_0 \end{bmatrix} = \begin{bmatrix} \alpha X + x_0 \\ \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0 \end{bmatrix}$$
+
 This matches the equations given.
 
 ### My solution
