@@ -15,6 +15,8 @@ I have a different philosophy when it comes to learning, I like to answer the qu
 **Question**: Parallel projection equations stated in the book (What tha hell is a projection? what is the meaning of being parallel?):
 
 $$x = \alpha X + x_0$$
+
+
 $$y = \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0$$
 
  Note: Lol this is just for fun but I am using antigravity to help me with the organization and creation of the pages in jekyll, and I wanted to paste the problem to not manually write it down, especially the equations, and it solved the problem for me, but I have already solved it by myself, so why not show the different ways of solving it? my way was really similar took me a bit more of time to write it down, but it was fun also I will show things that the machine can not think of.
@@ -49,8 +51,10 @@ Applying the projection matrix $P$:
 $$P \cdot R_x(\theta) \begin{bmatrix} X \\ Y \\ Z \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \\ \sin(\theta)Y + \cos(\theta)Z \end{bmatrix} = \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \end{bmatrix}$$
 
 Finally, applying the scale $\alpha$ and adding the offset $\begin{bmatrix} x_0 \\ y_0 \end{bmatrix}$:
+\\
 
 $$\begin{bmatrix} x \\ y \end{bmatrix} = \alpha \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \end{bmatrix} + \begin{bmatrix} x_0 \\ y_0 \end{bmatrix} = \begin{bmatrix} \alpha X + x_0 \\ \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0 \end{bmatrix}$$
+\\
 
 This matches the equations given.
 
