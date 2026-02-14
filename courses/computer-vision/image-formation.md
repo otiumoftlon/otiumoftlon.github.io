@@ -54,6 +54,7 @@ Finally, applying the scale $\alpha$ and adding the offset $\begin{bmatrix} x_0 
 \\
 
 $$\begin{bmatrix} x \\ y \end{bmatrix} = \alpha \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \end{bmatrix} + \begin{bmatrix} x_0 \\ y_0 \end{bmatrix} = \begin{bmatrix} \alpha X + x_0 \\ \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0 \end{bmatrix}$$
+
 \\
 
 This matches the equations given.
@@ -86,8 +87,16 @@ $$ R_x(\theta) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 
 
 Why in the x-axis is a bit straight forward, because the camera is rotating around the x-axis, so the x-component is not changing so that why is acolumn with 1 in the first row, and the y and z components are changing according to the angle theta, just see theta equal zero is convert to the identity matrix, so not rotation at all. So basically that is a rotation matrix, is the transformation that allows a vector to rotate around an axis, and if you have a set of vectors, you can rotatea them all together. There are other ways to do rotation, this is the most basic one, but also is a dangerous one, but I will explain it later when we talk about rotation in more detail. 
 
-After that is pretty straight forward, we jsut multiply the matrices, for me a good advice is always check the dimension of the matrices before multiplying. The result will be the same as the one doing with the AI. 
+After that is pretty straight forward, we just multiply the matrices, for me a good advice is always check the dimension of the matrices before multiplying. The result will be the same as the one doing with the AI. 
 
+
+### Theory
+
+So basically here you have how you can create an image from a 3D world, into a 2D image, lets talks first about the 2D image, you can transform it by translation, rigid, similarity, affine and projective transformations, so any image you can basically move.
+
+> [!TIP]
+> **Interactive Demo**: Check out the [Interactive Transformation Tool](/projects/transformation-tool/) project to see these transformations in action directly in your browser!
+ 
 
 
 
