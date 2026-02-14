@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Interactive 2D Transformation Tool
+parent: Projects
 permalink: /projects/transformation-tool/
 ---
 
