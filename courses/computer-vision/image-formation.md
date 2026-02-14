@@ -13,6 +13,7 @@ I have a different philosophy when it comes to learning, I like to answer the qu
 ## Problem: Projection and perspective
 
 **Question**: Parallel projection equations stated in the book (What tha hell is a projection? what is the meaning of being parallel?):
+
 $$x = \alpha X + x_0$$
 $$y = \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0$$
 
@@ -30,16 +31,20 @@ Then, find $\alpha, x_0$, and $y_0$ when the world point $(0, 0, 0)$ projects on
 
 #### 1. Transformation Matrices
 The rotation matrix around the X-axis by an angle $\theta$ is:
+
 $$R_x(\theta) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{bmatrix}$$
 
 The orthogonal projection matrix $P$ that selects the $X$ and $Y$ components is:
+
 $$P = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}$$
 
 #### 2. Derivation
 Multiplying the rotation matrix by the 3D point:
+
 $$R_x(\theta) \begin{bmatrix} X \\ Y \\ Z \end{bmatrix} = \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \\ \sin(\theta)Y + \cos(\theta)Z \end{bmatrix}$$
 
 Applying the projection matrix $P$:
+
 $$P \cdot R_x(\theta) \begin{bmatrix} X \\ Y \\ Z \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \\ \sin(\theta)Y + \cos(\theta)Z \end{bmatrix} = \begin{bmatrix} X \\ \cos(\theta)Y - \sin(\theta)Z \end{bmatrix}$$
 
 Finally, applying the scale $\alpha$ and adding the offset $\begin{bmatrix} x_0 \\ y_0 \end{bmatrix}$:
