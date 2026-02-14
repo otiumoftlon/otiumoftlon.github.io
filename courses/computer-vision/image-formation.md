@@ -15,7 +15,7 @@ I have a different philosophy when it comes to learning, I like to answer the qu
 **Question**: Parallel projection equations stated in the book (What tha hell is a projection? what is the meaning of being parallel?):
 
 $$x = \alpha X + x_0$$
-
+\\
 
 $$y = \alpha(\cos(\theta)Y - \sin(\theta)Z) + y_0$$
 
