@@ -13,5 +13,5 @@ projects/**/*.pdf
 
 .venv/*
 
-# Ignore .pptx files in numerical algebra projects
-projects/numerical_algebra/**/*.pptx
+# Ignore .pptx and .ppt files in numerical algebra projects
+projects/numerical_algebra/**/*.ppt*
