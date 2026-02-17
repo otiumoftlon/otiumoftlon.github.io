@@ -15,3 +15,7 @@ projects/**/*.pdf
 
 # Ignore .pptx and .ppt files in numerical algebra projects
 projects/numerical_algebra/**/*.ppt*
+
+# Ignore specific project folders
+projects/numerical_algebra/18335-spring19/
+/projects/numerical_algebra/18335-spring19/psets
